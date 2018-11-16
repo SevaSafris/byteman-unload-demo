@@ -1,0 +1,19 @@
+RULE rule1
+CLASS org.safris.byteman.RuleTest
+METHOD triggerMethod()
+AT ENTRY
+IF TRUE
+DO
+  traceln(">>>>>>>> rule1");
+  $0.rule1.run();
+ENDRULE
+
+RULE rule2
+CLASS org.safris.byteman.RuleTest
+METHOD triggerMethod()
+AT ENTRY
+IF TRUE
+DO
+  traceln(">>>>>>>> rule2");
+  $0.rule2.run();
+ENDRULE
